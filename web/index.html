@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+    var enlaceMenu;
+function iniciarMenu()
+{
+enlaceMenu = document.querySelector("nav>a");
+enlaceMenu.addEventListener("click", despliegaMenu, false);
+}
+function despliegaMenu()
+{
+document.querySelector("nav>ul").classList.toggle('desplegado');
+}
+window.addEventListener("load", iniciarMenu, false);
+    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<link rel="stylesheet" href="./estilo.css" type="text/css"/>
+</head>
+
+<body>
+<div id="contenedor">
+  <header>
+      <img src="./img/logo.png"/> 
+  </header>
+  <nav>
+       <a href="#">Menu</a>
+    <ul>
+      <li> Inicio </li>
+      <li> <a href="./productos.html">Productos</a> </li>
+      <li><a href="./novedades.html"> Novedades</a> </li>
+        <li><a href="./contacto.html"> Contacto</a> </li>
+        <li><a href="./presupuesto.html"> Presupuesto</a> </li>
+    </ul>
+  </nav>
+    
+  <section id="video">
+      <article>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/fEX4Q31K8bI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+      </article>
+ 
+    </section>
+
+  <footer class="footerPagina">
+    <div id="parrafos">
+      <p class="info">Tienda física en Valencia:</p>
+      <p class="info">Calle Ángel Guimerá 28-10</p>
+      <p class="info">46000 Valencia, España.</p>
+      <p class="info">Teléfono: 625275135</p>
+      <p class="info">  Correo electrónico: tienda.daw@gmail.com</p>
+    </div>
+    <div id="foto">
+      <img src="./img/mapa.png"/>
+    </div>
+  </footer>
+</div>
+</body>
+
+</html>
