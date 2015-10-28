@@ -10,9 +10,12 @@
 <project name="burlao" default="default" basedir=".">
     <description>Builds, tests, and runs the project burlao.</description>
     <import file="nbproject/build-impl.xml"/>
-    <target name="prueba">
-<echo>Hola mundo </echo>
-    </target>
+ <target name="deployProduccion">
+ <deploy url="http://52.24.9.39:8080/manager/text" username="deploy" password="despliegue1" path="/tienda" war="C:\Users\alumno\Documents\NetBeansProjects\burlao\dist\burlao.war"/> 
+ </target>
+ <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask" />
+ <property name="libs.CopyLibs.classpath" value="ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+<property name="j2ee.server.home" value="ant" />
     <!--
 
     There exist several targets which are by default empty and which can be
